@@ -102,11 +102,15 @@ To set up a highly available Kubernetes cluster with Three master nodes and two 
    ```bash
    kubeadm token create --print-join-command
    ```
+   Follow the image instruction for setup master node
+   <img src='https://github.com/deepakkapse/HA-K8-Cluster/blob/main/Images/attachnodes.PNG' />
 
 2. **Run the join command on each worker node:**
    ```bash
    sudo kubeadm join LOAD_BALANCER_IP:6443 --token <token> --discovery-token-ca-cert-hash sha256:<hash>
    ```
+   Follow the image instruction for setup worker node 
+   <img src='https://github.com/deepakkapse/HA-K8-Cluster/blob/main/Images/attachnodes.PNG' />
 
 ### Step 6: Verify the Cluster
 1. **Check the status of all nodes:**
